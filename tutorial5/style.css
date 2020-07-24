@@ -1,0 +1,357 @@
+/* SITE-STYLE MAPPING
+  -> GLOBAL VARIABLES, CONFIG
+
+  -> HEADER CONFIG
+
+  -> ASIDE CONFIG
+    => navigation header
+    => navigation content
+  ->SITE CONTENT CONFIG
+
+ */
+
+
+/* <<< GLOBAL VARIABLES AND CONFIG >>> */
+:root{
+
+/* HEADER AREA */
+  --header-background-color: lightgrey;
+  --header-text-color: black;
+  --header-height: 50px;
+  --header-shadowing: 0px 2px 3px 0px grey;
+
+  --header-logobar-width: 2fr;
+  --header-seachbar-width: 4fr;
+  --header-profilebar-width: 1fr;
+
+  --header-searcharea-focus: 1px 1px 3px 3px var(--aside-visible-background);
+
+/* HEADER-ASEIDE COMMON DEF */
+  --logo-nav-width: 100px;
+  --nav-hamburger-width: 30px;
+  --logo-icon-size-ratio: 50%;
+
+/* ASIDE NAVIGATION AREA */
+  --nav-aside-width: 180px;
+  --aside-visible-background: grey;
+  --aside-text-color: white;
+  --aside-visible-shadowing: 1px 0px 3px lightgrey;
+  --aside-navheader-shadowing: 0px 2px 2px lightgrey;
+  --aside-nonvisible-background: rgba(0, 0, 0, 0.6);
+
+/* SITE AREA */
+  --background-color: rgb(255, 231, 173);
+  --card-element-shadowing:2px 2px 3px 3px black;
+  --card-element-width: 300px;
+  --card-element-height: 150px;
+
+  --card-pictitle-background: rgba(0,0,0,0.6);
+  --card-pictitle-color: white;
+  --card-pic-width: 150px;
+  --card-pic-height: 150px;
+
+  --seeked-thing-highlight: rgb(173, 255, 251);
+
+/* KEYBOARD AREA */
+  --keyboardarea-background-color: lightgrey;
+  --keyboardarea-shadowing: 0px -2px 3px 0px grey;
+  --key-button-background: rgb(255, 231, 173);
+  --key-button-shadowing: 1px 1px 3px black;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: var(--background-color);
+}
+.header_element{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.logo_nav_pair{
+  width: var(--logo-nav-width);
+}
+.logo_icon{
+  height: var(--logo-icon-size-ratio);
+  width: var(--logo-icon-size-ratio);
+}
+
+
+
+/* << Navigation hamburger >> */
+.nav_icon{
+  position: relative;
+}
+.icon_pic{
+  position: relative;
+  background-color: var(--header-text-color);
+  height: 3px;
+  width: var(--nav-hamburger-width);
+}
+.icon_switch_aside{
+  position: absolute;
+  left: 5px;
+  opacity: 0;
+  cursor: pointer;
+  transform: scale(280%, 280%);
+  z-index: 1;
+}
+.icon_pic::before, .icon_pic::after{
+  content:"";
+  background-color: var(--header-text-color);
+  position: absolute;
+  width: inherit;
+  height: 3px;
+  left: 0;
+}
+.icon_pic::before{
+  top: -8px;
+}
+.icon_pic::after{
+  bottom: -8px;
+}
+.icon_space{
+  margin: 10px 7px;
+  cursor: pointer;
+
+}
+
+
+
+
+
+
+/* <<< only header configuraton >>> */
+#header{
+  background-color: var(--header-background-color);
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns:
+    var(--header-logobar-width)
+    var(--header-seachbar-width)
+    var(--header-profilebar-width);
+  box-shadow: var(--header-shadowing);
+  z-index: 3;
+}
+
+
+/* << search area configuration >> */
+
+#seach_bar{
+
+}
+.searcharea{
+  width: 40%;
+  border: 0px;
+  font-size: 1.3rem;
+}
+.searcharea:focus{
+  box-shadow: var(--header-searcharea-focus);
+}
+.keyboard_btn, .search_btn{
+}
+
+/* << profile area configuration >> */
+#profile_bar{
+
+}
+
+
+
+
+
+
+/*  <<< only aside configuration >>> */
+#nav_aside{
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100vh;
+  z-index: 5;
+  background-color: var(--aside-nonvisible-background);
+  display: flex;
+  transition: left 100ms linear, opacity 200ms linear 10ms;
+}
+#nav_visible{
+  background-color: var(--aside-visible-background);
+  box-shadow: var(--aside-visible-shadowing);
+  flex-basis: var(--nav-aside-width);
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  color: var(--aside-text-color);
+}
+#nav_nonVisible{
+  flex-basis: calc( 100% - var(--nav-aside-width));
+}
+.nav_statusOff{
+  left: -100%;
+  opacity: 0.0;
+}
+.nav_statusOn{
+  left: 0px;
+  opacity: 1.0;
+}
+
+/* << navigation hader >> */
+#nav_header{
+  display: flex;
+  height: var(--header-height);
+  box-shadow: var(--aside-navheader-shadowing);
+}
+#nav_header .icon_pic,
+#nav_header .icon_pic::before,
+#nav_header .icon_pic::after{
+  background-color: var(--aside-text-color);
+}
+
+/* << navigation content >>  */
+#nav_area{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav_element{
+  font-size: 1.1rem;
+  margin-top: 30px;
+  color: var(--aside-text-color);
+  text-decoration: none;
+}
+.nav_element:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+/* <<< site content configuration >>> */
+#site_content{
+  margin: 30px;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+/* << a card element >> */
+.card_element{
+  box-shadow: var(--card-element-shadowing);
+  margin: 30px 30px;
+  flex-basis: var(--card-element-width);
+  height: var(--card-element-height);
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+
+/* << first-part of cards >> */
+.card_pic{
+  position: relative;
+  width: var(--card-pic-width);
+  cursor: pointer;
+
+}
+.pic_title{
+  position: absolute;
+  width: var(--card-pic-width);
+  left: -3000px;
+  bottom: 0;
+  height: 1.3rem;
+  background-color: var(--card-pictitle-background);
+  color: var(--card-pictitle-color);
+
+}
+.card_pic:hover > .pic_title{
+  left: 0px;
+}
+.pic_image{
+  object-fit: cover;
+
+  width: var(--card-pic-width);
+  height: var(--card-pic-height);
+}
+/* << second-part of cards >> */
+.card_descr{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  margin-left: 10px;
+}
+.card_title{
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-style: italic;
+}
+.card_author{  }
+.card_title:hover, .card_author:hover, .pic_title:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.card_statist{  }
+
+.things_infocus{
+  background-color: var(--seeked-thing-highlight);
+}
+
+
+
+
+
+/* <<< keyboard input area configuration >>> */
+#keyboard_inputarea{
+  position: fixed;
+  bottom: 0;
+  background-color: var(--keyboardarea-background-color);
+  width: 100%;
+  box-shadow: var(--keyboardarea-shadowing);
+  padding-bottom: 20px;
+}
+
+.keyboard_nonvisible{
+  display: none;
+}
+.keyboard_visible{
+  display: block;
+}
+.keyarea{
+  width: 45%;
+  margin: 4px auto;
+  border-radius: 30%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.spacearea{
+  width: 45%;
+  margin: 10px auto;
+  border-radius: 30%;
+}
+.key_element{
+  margin: 4px;
+  cursor: pointer;
+
+  font-size: 2rem;
+  flex-basis: 30px;
+  background-color: var(--key-button-background);
+  height: 2.5rem;
+
+  text-align: center;
+}
+.key_element:active{
+  box-shadow: var(--key-button-shadowing);
+}

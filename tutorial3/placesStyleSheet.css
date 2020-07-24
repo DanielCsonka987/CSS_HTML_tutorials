@@ -1,0 +1,422 @@
+
+
+/* CSS MAPPING
+
+-> GLOBAL config
+-> NAVIGATION elements
+    => NAV ICON AT THE LEFT
+    => NAV ITEMS TO NAVIGATE
+-> SITE CONTENT config
+    => GENERAL CONFIGURATION TO ARTICLE
+    => GENERAL RULES TO SECTIONS
+    => SPECIAL RULES TO EACH SECTIONS
+*/
+
+
+
+/* <<< GLOBAL configurations >>> */
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background: linear-gradient(30deg, rgb(235, 196, 90), rgb(247, 107, 14)) ;
+    background-size: cover;
+    background-repeat: round;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* <<< NAVIGATION elements >>> */
+nav{
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    top: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: antiquewhite;
+    z-index: 1;
+
+}
+header{
+    position: absolute;
+    left: 0;
+    width: fit-content;
+    margin-left: 1%;
+    margin-right: auto;
+
+    font-size: 2em;
+}
+
+
+
+/* << NAV AND ICON AT THE LEFT SIDE >> */
+.nav_icon_right{
+    top: 0;
+    right: 0;
+    height: inherit;
+    width: 60px;
+}
+#nav_switch{
+    display: block;
+    opacity: 0;
+    position: absolute;
+
+    cursor: pointer; 
+    z-index: 2;
+}
+#nav_hamburgerBackground{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 45%;
+    background-color: inherit;
+}
+#nav_hamburger{
+    position: relative;
+    width: 40px;
+    height: 3px;
+    background-color: gray;
+    transition: transform 300ms linear;
+}
+
+#nav_hamburger::before,
+#nav_hamburger::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: inherit;
+    top: -15px;
+    background: inherit;
+    transition: transform 300ms linear;
+}
+#nav_hamburger::after{
+    top: 15px;
+}
+#nav_switch:checked ~ #nav_body{
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* < CONFIG IF THE HAMBURGER AT FOCUS  >*/
+#nav_switch:focus + #nav_hamburgerBackground{
+    background: radial-gradient(rgb(235, 192, 135) 10%, antiquewhite);
+}
+#nav_switch:focus + #nav_hamburgerBackground > #nav_hamburger{
+    background-color: rgb(32, 32, 32);
+}
+/* < CONFIG IF THE HAMBURGER IS CHOSEN  >*/
+#nav_switch:checked + #nav_hamburgerBackground > #nav_hamburger{
+    transform: rotate(135deg);
+} 
+#nav_switch:checked + #nav_hamburgerBackground > #nav_hamburger::before, 
+    #nav_switch:checked + #nav_hamburgerBackground >  #nav_hamburger::after{
+    top: 0px;
+    transform: rotate(90deg);
+}
+
+
+/* << NAV MENU ITEMS TO NAVIGATE >>*/
+#nav_body{
+    display: none;
+    padding-top: 40px;
+    transition: display 5s linear;
+    border-radius: 0% 0% 5% 5%;
+}
+.nav_item{
+    width: 100%;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10%;
+    text-align: center;
+
+}
+.nav_item a{
+    padding: 0px 30%;
+    border-radius: 50%;
+}
+.nav_item a:hover, .nav_item a:focus{
+    background-color: rgb(235, 192, 135);
+    font-size: 1.1em;
+
+}
+.nav_item a:active{
+    background-color: rgb(243, 162, 55);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* <<< SITE CONTENT configurations >>>*/
+
+/* << GNEREAL CONFICURATION to acticle >>*/
+article{
+    width: 90%;
+    opacity: .95;
+    margin: 60px auto;
+    border: 1px solid transparent;
+
+    font-size: 1.4em;
+    color: whitesmoke;
+}
+.section{
+    padding: 25px;
+    padding-top: 65px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section p{
+    display: inline-block;
+    margin: 70px;
+
+    font-size: 0.9em;
+    text-align: justify;
+}
+.section a{
+    display: block;
+    background: transparent;
+    padding: 15px;
+    border: 1px solid whitesmoke;
+    border-radius: 8%;
+
+    /* text-decoration: none; */
+    color: inherit;
+    font-size: 1.1em;
+}
+
+/* <<  GENERAL RULES TO SECTIONS >>*/
+.section button:hover{  }
+.section button:active{ }
+
+
+
+
+
+
+
+/* << SPECIAL RULES TO EACH SECTIONS >>*/
+/* < section 1 >*/
+#sec1{
+    background: fixed url("astronomy-beautiful-clouds-constellation-355465.jpg") no-repeat center;
+
+}
+#sec1 a
+{
+    display: block;
+    position: relative;
+    border-radius: 30%;
+    z-index: 2;
+}
+#sec1 a::before{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    height: 100%;
+    border-radius: 30%;
+    background-color: grey;
+    z-index: -1;
+
+    transition: width 300ms;
+    opacity: .7;
+    content: "";
+}
+#sec1 a:hover::before{
+    width: 100%
+}
+#sec1 a:active::before{
+    background-color: rgb(39, 39, 39);
+}
+#sec1 a:active{
+    color: whitesmoke;
+    border-color: whitesmoke;
+}
+
+
+/* < section 2 >*/
+#sec2{
+    background: fixed url("mist-misty-fog-foggy-7919.jpg") no-repeat center;
+
+}
+#sec2 p, #sec2 h2{
+    padding: 20px;
+    background-color: rgba(128, 128, 128, 0.8);
+    margin: 15px;
+}
+#sec2 h2{
+    border-radius: 30%;
+}
+#sec2 a{
+    border: 3px solid  whitesmoke;
+    cursor: pointer;
+    border-color:  grey;
+    border-radius: 30%;
+    background-color: grey;
+}
+#sec2 a:hover{
+    background-color: rgb(83, 83, 83);
+}
+#sec2 a:active{
+    border: 3px solid black;
+    color:black;
+    background-color: white;
+}
+
+
+/* < section 3 >*/
+#sec3{
+    background: fixed url("adventure-calm-clouds-dawn-414171.jpg") no-repeat center;
+}
+#sec3_background{
+
+    position: relative;
+    width: 90%;
+    text-align: center;
+    background-color: rgba(0, 128, 128, .4);
+}
+#sec3 a{
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+}
+#sec3 a::before, #sec3 a::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color:  rgba(0, 128, 128, .6);
+    border-radius: 10%;
+    transition: transform 300ms linear, background-color 300ms linear;
+}
+#sec3 a:hover::before{
+    transform: rotate(45deg) scale(0.7, 1) translate(-15px, 6px) skew(10deg, 10deg);
+    background-color:  rgba(0, 156, 96, 0.9);
+}
+#sec3 a:hover::after{
+    transform: rotate(-45deg) scale(1.2, 1) translate(40px, 10px);
+    background-color:  rgba(0, 156, 96, 0.9);
+}
+
+/* < section 4 >*/
+#sec4{
+    background: fixed url("green-trees-under-blue-and-orange-sky-during-sunset-1107717.jpg") no-repeat center;
+}
+#sec4_background{
+    background-color: rgb(96, 67, 126);
+    opacity: .8;
+    border-radius: 30%;
+    padding: 10px;
+    text-align: center;
+}
+#sec4 a{
+    position: relative;
+    border: none;
+    display: inline-block;
+    background: inherit;
+    border-radius: 20%;
+    z-index: 2;
+}
+#sec4 a::before, #sec4 a::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 20%;
+
+}
+#sec4 a::before{
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00,
+         #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background-size: 400%;
+    filter: blur(5px);
+    animation: glowing 20s linear infinite;
+}
+#sec4 a::after{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+}
+#sec4 a:hover::before, #sec4 a:hover::after{
+    opacity: 1;
+}
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+/* < section 5 >*/
+#sec5{
+    background: fixed url("aerial-view-beach-beautiful-cliff-462162.jpg") no-repeat center;
+}
+
+#sec5_background{
+    text-align: center;
+    background-color: rgba(255, 99, 71, .5);
+}
+
+#sec5 a{
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+    transition: box-shadow 300ms ease-out;
+}
+#sec5 a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    z-index: 1-;
+    transition: box-shadow 100ms ease-out;
+}
+#sec5 a:hover{
+    box-shadow: 0px 0px 5px 5px white;
+}
+#sec5 a:active::before{
+    box-shadow: 0px 0px 4px 4px rgb(189, 187, 187);
+}

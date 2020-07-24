@@ -1,0 +1,334 @@
+
+/*
+    MAPPING OF tutorial StyleSheet
+    -> GLOBAL VARIABLES
+
+    -> GLOBAL configurations
+
+    -> HEADER global configurations
+
+    -> MAIN content global configuration
+
+    -> LOGIN / REGISTRATION configuration
+
+    -> SHOPPING AREA CONFIGURATIONS
+        => CONTENT CARD DEFINITIONS
+        => DATA ADDITION PROGRESS CIRCLE
+*/
+
+
+
+
+
+
+
+
+
+/*<<< GLOBAL DEFINITIONS >>>*/
+:root{
+    /*for background*/
+    --body_background_image: url("./accounting-analytics-balance-black-and-white-209224.jpg") center/cover no-repeat  fixed;
+    --header_background_color: linear-gradient(40deg, rgb(138, 169, 253), rgb(62, 114, 255) );
+
+    /*for controlers and its surface*/
+    --panel_background: rgb(252, 249, 218);
+    --panel_shawod_color: rgb(54, 54, 54);
+    --font-color-general: rgb(54, 54, 54);
+    --font-color-highlighten:  rgb(252, 249, 218);
+    --active-input-nav-edge: rgb(146, 164, 247);
+    --button-bgcolor-basic: rgb(253, 253, 253);
+    --btn_bgcolor_hover: rgb(67, 129, 243);
+    --link_color_visited: rgb(55, 85, 255);
+
+    --prog-circle-size: 25px;
+    --prog-circle-fill: 20px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: var(--body_background_image);
+    color: var(--font-color-general);
+    font-size: 1.3em;
+}
+input, label{
+    display: block;
+    margin: 5px 0px 5px 0px;
+}
+.active_gnrl{
+    color: var(--fnt-clr);
+    cursor: pointer;
+    margin: 30px auto;
+    background-color: var(--button-bgcolor-basic);
+
+    text-decoration: none;
+    transition: background-color 300ms linear, color 200ms linear;
+}
+.btn_gnrl{
+
+    padding: 8px 30px;
+    border-radius: 20%;
+
+}
+.active_gnrl:hover{
+    background-color: var(--btn_bgcolor_hover);
+    color: var(--font-color-highlighten);
+}
+.active_gnrl:focus, input:focus{
+    box-shadow: 0px 0px 4px 3px var(--active-input-nav-edge);
+}
+
+
+
+
+
+
+
+
+
+
+/* <<< HEADER global/general conf >>>*/
+
+header{
+    position: fixed;
+    top: 0;
+    background: var(--header_background_color);
+    height: 90px;
+    width: 100%;
+    box-shadow: 0px 1px 5px var(--panel_shawod_color);
+    overflow: hidden;
+
+    z-index: 1;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#logo{
+    flex-basis: 150px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: var(--panel_background);
+    border-radius: 50%;
+
+    padding: 10px;
+    text-align: center;
+
+}
+.logo_active{
+    text-decoration: none;
+    transition: text-shadow 300ms ease-out;
+
+}
+#logo:hover .logo_active{
+    text-shadow: 1px 2px 4px var(--panel_shawod_color);
+}
+
+
+
+
+
+
+
+
+/* <<< MAIN CONTENT global/general conf >>>*/
+
+.main_content{
+    background-color: var(--panel_background);
+    margin: 130px auto 0px auto;
+    box-shadow: 1px 1px 5px var(--panel_shawod_color);
+
+    overflow-y: auto;
+}
+.main_content h3, .main_content h4{
+  margin: 10px 20px;
+}
+
+.txt_title{
+    margin: 35px 0px 35px 0px;
+}
+
+
+
+
+
+
+/*<<< LOGIN / REGISTRATION SURFICE DEFINITIONS >>>*/
+
+.reg_login_content{
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.reg_login_content form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.reg_login_content .reg_require{
+    color: red;
+}
+.reg_login_exclam{
+    margin: 35px auto;
+    width: 70%;
+
+    text-align: justify;
+    line-height: 1.4em;
+}
+.reg_login_exclam a{
+    text-decoration: none;
+    font-weight: bold;
+}
+.reg_login_exclam a:visited{
+    color: var(--link_color_visited);
+}
+.reg_login_exclam a:active{
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+/* <<< SHOPPING AREA CONFIGURATIONS >>>*/
+
+nav{    /* << part of the header displ-flex >>  */
+    flex-basis: 80vw;
+    flex-grow: 1;
+    flex-shrink: 0;
+
+    text-align: center;
+}
+.nav_item{  /* << these are active_gnrl as well >>*/
+    display: inline-block;
+    margin: 3px 5px;
+    padding: 5px;
+
+    border-radius: 20%;;
+}
+
+.shopping_area{
+    width: 80%;
+
+}
+#shopping_allchards{
+
+}
+
+/*  << CONTENT CARD DEFINITIONS >> */
+
+.shopping_card{
+  margin: 30px;
+  padding: 10px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+
+  box-sizing: content-box;
+  box-shadow: 2px 2px 7px 1px;
+}
+.card_img{
+  position: relative;
+  cursor: pointer;
+
+}
+.card_img .title{
+  background-color: rgb(138, 138, 138 );
+  opacity: 0.9;
+  position: absolute;
+  left: -2000px;
+  bottom: 0px;
+
+  width: 100%;
+  color: white;
+  text-align: center;
+  transition: 50ms left linear;
+}
+.card_img:hover .title{
+  left: 0px;
+}
+.card_img img{
+    height: 200px;
+}
+.card_content{
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+}
+.card_content p{
+  margin: 30px 0px;
+  height: 100%;
+}
+.card_manage{
+  display: flex;
+  flex-direction: row;
+}
+.card_mange_item{
+  margin: 0px 10px;
+  cursor: pointer;
+  background-color: white;
+}
+
+@media (max-width: 1024px){
+  .card_content p{
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 610px){
+  .card_content p{
+    overflow-y: hidden;
+  }
+}
+
+/* << LOAD IN NEW DATA PROGRESS CIRCLE ANIMATION >> */
+
+.progress_basis{
+  width: var(--prog-circle-size);
+  height: var(--prog-circle-size);
+}
+.progress_circle_radius{
+  /* display: none; */
+  position: relative;
+  background-color: inherit;
+  margin: 10px auto;
+}
+.progress_animated{
+
+  border-radius: 50%;
+  background-color: gray;
+  position: absolute;
+  clip-path: polygon(50% 0%, 100% 0%, 100% 85%, 50% 50%);
+  top: 0;
+  left: 0;
+  animation-duration: 1s;
+  animation-name: circleProgress;
+  animation-iteration-count: infinite;
+
+}
+.progress_circle_filling{
+  width: var(--prog-circle-fill);
+  height: var(--prog-circle-fill);
+  position: absolute;
+  top: calc((var(--prog-circle-size) - var(--prog-circle-fill)) /2);
+  left: calc((var(--prog-circle-size) - var(--prog-circle-fill)) /2);
+  border-radius: 50%;
+  background-color: var(--panel_background);
+  z-index: 2;
+}
+
+@keyframes circleProgress {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}

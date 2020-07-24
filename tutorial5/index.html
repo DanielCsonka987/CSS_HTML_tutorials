@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="tutorial site of css and javascript">
+  <meta name="author" content="Daniel Csonka">
+  <meta name="keywords" content="HTML, CSS JavaScript">
+
+  <title>YouTubeLike site</title>
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+
+  <div id="header">
+
+      <div class="header_element logo_nav_pair">
+        <div class="nav_icon icon_space">
+          <input type="checkbox" class="icon_switch_aside"
+           id="aside_on">
+          <div class="icon_pic"></div>
+        </div>
+        <img class="logo_icon icon_space" src="mypipelogo.svg">
+        <p>MyPipe</p>
+      </div>  <!-- end of header area -->
+
+      <div id="seach_bar" class="header_element">
+          <span>Search:</span>
+          <input type="text" class="searcharea icon_space">
+          <button class="keyboard_btn icon_space">⌨</button>
+          <button class="search_btn icon_space">🔍</button>
+      </div>
+      <div id="profile_bar" class="header_element">Somthing</div>
+
+  </div>  <!-- end of header  -->
+
+
+
+
+  <div id="nav_aside" class="nav_statusOff">
+
+    <div id="nav_visible">
+      <div id="nav_header">
+          <div class="header_element logo_nav_pair">
+            <div class="nav_icon icon_space">
+              <input type="checkbox" class="icon_switch_aside"
+               id="aside_off">
+              <div class="icon_pic"></div>
+            </div>
+            <img class="logo_icon icon_space" src="mypipelogo.svg">
+            <p>MyPipe</p>
+          </div>  <!-- end of header area -->
+      </div>
+      <div id="nav_area">
+        <a href="#" class="nav_element">Nav to somewhere 1</a>
+        <a href="#" class="nav_element">Nav to somewhere 2</a>
+        <a href="#" class="nav_element">Nav to somewhere 3</a>
+        <a href="#" class="nav_element">Nav to somewhere 4</a>
+        <a href="#" class="nav_element">Nav to somewhere 5</a>
+      </div>
+    </div>  <!-- end of nav-viable -->
+    <div id="nav_nonVisible"></div>
+  </div>  <!-- end of nav-aside  -->
+
+  <div id="site_content">
+
+
+
+  </div>  <!-- end of site-content  -->
+
+
+
+
+  <div id="keyboard_inputarea" class="keyboard_nonvisible">
+    <div id="numarea" class="keyarea"></div>  <!-- end of keyarea -->
+    <div id="symoblarea" class="keyarea"></div>  <!-- end of keyarea -->
+    <div id="chararea" class="keyarea"></div>  <!-- end of keyarea -->
+    <div id="spacearea" class="spacearea"></div>  <!-- end of keyarea -->
+  </div>  <!-- end of keyboard area -->
+</body>
+<script type="text/javascript" src="app.js"></script>
+
+</html>

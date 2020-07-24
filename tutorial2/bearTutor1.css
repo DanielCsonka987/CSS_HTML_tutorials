@@ -1,0 +1,183 @@
+body{
+    background: url("adventure-calm-clouds-dawn-414171.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top; 
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+
+#main-menuBar{
+    opacity: .8;
+    background-color: black;
+    padding: 10px;
+    color: white;
+    
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 10;
+
+}
+.menuBar-high, .logo {
+    background-color: black;
+    margin: 10px;
+    
+    flex-basis: 10%;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+.logo{
+    border-radius: 50%;
+    
+    flex-basis: 45%;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+.menuBar-high a{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+}
+.menuBar-high > a{
+    border: 3px solid grey;
+    border-radius: 10px;
+
+}
+.menuBar-drop {
+    display: none;
+    position: absolute;
+    background-color: black;
+    width: 20%;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.menuBar-high:hover{
+    background: radial-gradient(darkgrey, black 70%);
+}
+.menuBar-high:hover > div{
+    display: block;
+}
+.menuBar-high a:hover{
+    background: radial-gradient(darkgrey, black 60%);
+    font-weight: 600;
+}
+.menuBar-drop a:hover{
+    font-weight: 600;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+
+
+
+#main-content{
+    margin: 0 auto;
+    padding: 1%;
+    width: 70%;
+    background-color: aliceblue;
+    position: relative;
+    
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.5em;
+}
+#main-content h1, #main-content h2{
+    font-family: 'Ubuntu', sans-serif;
+    font-style: italic;
+    margin: 2% 2% 0% 0%;
+
+}
+.section{
+    text-align: justify;
+    margin: 2%;
+}
+.img-illustrate{
+    width: 40%;
+    float: right;
+    margin: 1% 0% 1% 2%;
+}
+.need-smaller{
+    width: 30%;
+}
+
+
+
+
+
+#footer-area{
+    background-color: black;
+    padding: 0% 6% 0% 6%;
+    opacity: .8;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: top;
+}
+
+.footer-content{
+    padding: 1% 3% 1% 3%;
+    
+    flex-basis: 23%;
+}
+
+.footer-content ul{
+    list-style-type: none;
+    padding: 0px;
+}
+.footer-content a{
+    color: white;
+    display: block;
+    text-decoration: none;
+    padding: 3px 0px 3px 0px;
+}
+.footer-content a:hover{
+    background: radial-gradient(darkgrey, black 60%);
+    font-weight: 600;
+}
+.footer-content input{
+    display: block;
+    margin: 8px 0px 8px 0px;
+}
+input[type="email"]{
+    width: 100%;
+}
+input[type="submit"]{
+    color: white;
+    padding: 5px;
+    background-color: black;
+    border: 3px solid grey;;
+    border-radius: 10px;
+}
+input[type="submit"]:active{
+    background: radial-gradient(darkgrey, black 60%);
+}
+
+@media only screen and (max-width: 900px){
+    
+    #main-menuBar{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .logo{
+        display: none;
+    }
+    .menuBar-drop{
+        position: relative;
+        width: 100%;
+    }
+    
+    #footer-area{
+        flex-direction: column;
+        align-items: center;
+    }
+}

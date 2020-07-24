@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CSS tutorial 1</title>
+        <meta charset="utf-8">
+        
+        <link rel="stylesheet" href="tutorial1.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+    </head>
+    <body onload="adjustRatingsEvents()">
+        <script src="tutorial1.js"></script>
+        <div id="content-all">
+            <div id="header">
+                <div>My Pub</div>
+            </div>
+
+
+            <dic id="content-container">
+                <div id="content-menu">
+                    <div><a href="#" class="menu-item">Menu 1</a></div>
+                    <div><a href="#" class="menu-item">Menu 2</a></div>
+                    <div><a href="#" class="menu-item">Menu 3</a></div>
+                    <div><a href="#" class="menu-item">Menu 4</a></div>
+                    <div><a href="#" class="menu-item">Menu 5</a></div>
+                </div>
+
+                <div id="content-opinion" >
+                    
+                    <div id="content-management">
+                        <p>Write us your opinion about the place!</p>
+                        <form>
+                            <lable for="opinion-name">Your name:</lable>
+                            <input type="text" name="opinion-name">
+                            <div id="rating-complex">
+                                <span>Rate:</span>
+                                <span class="rate" value="0">
+                                    0</span>
+                                <span class="rate" ><img src="star-icon.png" value="1"></span>   
+                                <span class="rate" ><img src="star-icon.png" value="2"></span>
+                                <span class="rate" ><img src="star-icon.png" value="3"></span>
+                                <span class="rate" ><img src="star-icon.png" value="4"></span>
+                                <span class="rate" ><img src="star-empty-icon.png" value="5"></span>
+                                <span class="rate" value="5">
+                                    5</span>
+                                <input type="hidden" name="opinion-value" value="4">
+                            </div>
+                            <lable for="opinion-commente">Your thoughts:</lable>
+                            <textarea name="opinion-comment" rows="4"></textarea>
+                            <input type="submit" value="Send">
+                        </form>
+                    </div>  <!-- end of comment management -->
+                    
+                    <div id="opinion-items">
+                        <div class="comment-portion">
+                            <div class="comment-name">aUser</div>
+                            <div class="comment-rate">Rateing: 5</div>
+                            <div class="comment-text">This is very good place</div>
+                        </div>
+                        <div class="comment-portion">
+                            <div class="comment-name">Tom H</div>
+                            <div class="comment-rate">Rateing: 4</div>
+                            <div class="comment-text">The atmophare unforgettable</div>
+                        </div>
+                        <div class="comment-portion">
+                            <div class="comment-name">xyz</div>
+                            <div class="comment-rate">Rateing: 3</div>
+                            <div class="comment-text">The beer is not bad, but sometimes the lights are too strong at the evening!</div>
+                        </div>
+                    </div>
+                    
+                </div>  <!-- end of comment section -->
+                
+                <div id="content-main">
+
+                    <div>
+                    <h1>Aenean at neque metus</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nisl leo, tincidunt id scelerisque nec, ornare ut est. Nulla facilisi. Ut tincidunt tortor eget volutpat pellentesque. Vestibulum pulvinar interdum quam, commodo venenatis lectus tincidunt sit amet. Quisque maximus dictum diam ac pellentesque. Donec quis est vulputate, posuere mauris sed, consectetur lorem. Ut ut ornare turpis. Aenean at neque metus. Vestibulum pretium rhoncus dolor at bibendum. Pellentesque convallis, urna eu lobortis ullamcorper, dolor massa aliquet tellus, sed vestibulum dolor metus ut est. Aliquam sollicitudin egestas faucibus. Donec at iaculis magna. Nunc elit felis, semper ut dignissim porta, interdum sed elit. </p>
+                    
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nisl leo, tincidunt id scelerisque nec, ornare ut est. Nulla facilisi. Ut tincidunt tortor eget volutpat pellentesque. Vestibulum pulvinar interdum quam, commodo venenatis lectus tincidunt sit amet. Quisque maximus dictum diam ac pellentesque. Donec quis est vulputate, posuere mauris sed, consectetur lorem. Ut ut ornare turpis. Aenean at neque metus. Vestibulum pretium rhoncus dolor at bibendum. Pellentesque convallis, urna eu lobortis ullamcorper, dolor massa aliquet tellus, sed vestibulum dolor metus ut est. Aliquam sollicitudin egestas faucibus. Donec at iaculis magna. Nunc elit felis, semper ut dignissim porta, interdum sed elit. </p>
+                    
+                    <img src="assorted-wine-bottles-1283219.jpg">
+                        
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nisl leo, tincidunt id scelerisque nec, ornare ut est. Nulla facilisi. Ut tincidunt tortor eget volutpat pellentesque. Vestibulum pulvinar interdum quam, commodo venenatis lectus tincidunt sit amet. Quisque maximus dictum diam ac pellentesque. Donec quis est vulputate, posuere mauris sed, consectetur lorem. Ut ut ornare turpis. Aenean at neque metus. Vestibulum pretium rhoncus dolor at bibendum. Pellentesque convallis, urna eu lobortis ullamcorper, dolor massa aliquet tellus, sed vestibulum dolor metus ut est. Aliquam sollicitudin egestas faucibus. Donec at iaculis magna. Nunc elit felis, semper ut dignissim porta, interdum sed elit. </p></div>
+                    
+                    <div>
+                    <h3>Quisque maximus</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nisl leo, tincidunt id scelerisque nec, ornare ut est. Nulla facilisi. Ut tincidunt tortor eget volutpat pellentesque. Vestibulum pulvinar interdum quam, commodo venenatis lectus tincidunt sit amet. Quisque maximus dictum diam ac pellentesque. Donec quis est vulputate, posuere mauris sed, consectetur lorem. Ut ut ornare turpis. Aenean at neque metus. Vestibulum pretium rhoncus dolor at bibendum. Pellentesque convallis, urna eu lobortis ullamcorper, dolor massa aliquet tellus, sed vestibulum dolor metus ut est. Aliquam sollicitudin egestas faucibus. Donec at iaculis magna. Nunc elit felis, semper ut dignissim porta, interdum sed elit. </p>
+                    
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nisl leo, tincidunt id scelerisque nec, ornare ut est. Nulla facilisi. Ut tincidunt tortor eget volutpat pellentesque. Vestibulum pulvinar interdum quam, commodo venenatis lectus tincidunt sit amet. Quisque maximus dictum diam ac pellentesque. Donec quis est vulputate, posuere mauris sed, consectetur lorem. Ut ut ornare turpis. Aenean at neque metus. Vestibulum pretium rhoncus dolor at bibendum. Pellentesque convallis, urna eu lobortis ullamcorper, dolor massa aliquet tellus, sed vestibulum dolor metus ut est. Aliquam sollicitudin egestas faucibus. Donec at iaculis magna. Nunc elit felis, semper ut dignissim porta, interdum sed elit. </p></div>
+                    
+                    <div>
+                    <h3>Lorem ipsum dolor sit</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nisl leo, tincidunt id scelerisque nec, ornare ut est. Nulla facilisi. Ut tincidunt tortor eget volutpat pellentesque. Vestibulum pulvinar interdum quam, commodo venenatis lectus tincidunt sit amet. Quisque maximus dictum diam ac pellentesque. Donec quis est vulputate, posuere mauris sed, consectetur lorem. Ut ut ornare turpis. Aenean at neque metus. Vestibulum pretium rhoncus dolor at bibendum. Pellentesque convallis, urna eu lobortis ullamcorper, dolor massa aliquet tellus, sed vestibulum dolor metus ut est. Aliquam sollicitudin egestas faucibus. Donec at iaculis magna. Nunc elit felis, semper ut dignissim porta, interdum sed elit. </p>
+                        
+                    <img src="beer-barrel-956322_960_720.jpg">
+                        
+                    
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nisl leo, tincidunt id scelerisque nec, ornare ut est. Nulla facilisi. Ut tincidunt tortor eget volutpat pellentesque. Vestibulum pulvinar interdum quam, commodo venenatis lectus tincidunt sit amet. Quisque maximus dictum diam ac pellentesque. Donec quis est vulputate, posuere mauris sed, consectetur lorem. Ut ut ornare turpis. Aenean at neque metus. Vestibulum pretium rhoncus dolor at bibendum. Pellentesque convallis, urna eu lobortis ullamcorper, dolor massa aliquet tellus, sed vestibulum dolor metus ut est. Aliquam sollicitudin egestas faucibus. Donec at iaculis magna. Nunc elit felis, semper ut dignissim porta, interdum sed elit. </p>
+                    
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nisl leo, tincidunt id scelerisque nec, ornare ut est. Nulla facilisi. Ut tincidunt tortor eget volutpat pellentesque. Vestibulum pulvinar interdum quam, commodo venenatis lectus tincidunt sit amet. Quisque maximus dictum diam ac pellentesque. Donec quis est vulputate, posuere mauris sed, consectetur lorem. Ut ut ornare turpis. Aenean at neque metus. Vestibulum pretium rhoncus dolor at bibendum. Pellentesque convallis, urna eu lobortis ullamcorper, dolor massa aliquet tellus, sed vestibulum dolor metus ut est. Aliquam sollicitudin egestas faucibus. Donec at iaculis magna. Nunc elit felis, semper ut dignissim porta, interdum sed elit. </p></div>
+                    
+                </div>  <!-- end of content-main section -->
+                
+                <div id="content-footback"></div>
+                
+                <div id="content-footer">
+                    <div class="footer-unit">
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">History</a></li>
+                            <li><a href="#">Partners</a>s</li>
+                        </ul>
+                    </div>
+                    <div class="footer-unit">
+                         <ul>
+                            <li><a href="#">Ordering events</a></li>
+                            <li><a href="#">Contatct</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </dic>  <!-- end of content-container section -->
+
+        </div>  <!-- end of content-all, general wrapper -->
+    </body>
+</html>
